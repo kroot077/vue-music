@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div v-for="song in songData" class="song-result" :key="song.trackId">
+    <div v-for="playlist in playData" class="play-result" :key="song.trackId">
       <img :src="song.artworkUrl100">
       <p>Song: {{song.trackName}}</p>
       <p>Artist: {{song.artistName}}</p>
@@ -12,14 +12,14 @@
 
 <script>
 export default {
-  name: 'Song',
+  name: 'Playlist',
   computed: {
     song() {
-      return this.$store.state.songs
-      console.log(song)
+      return this.$store.state.playlists
+      console.log(playlists)
     }
   },
-  props: ["songData"]
+  props: ["playData"]
 }
 </script>
 

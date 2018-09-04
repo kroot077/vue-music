@@ -14,7 +14,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    songs: []
+    songs: [],
+    playlists: []
   },
   mutations: {
     setSongs(state, data) {
@@ -23,11 +24,12 @@ export default new Vuex.Store({
   },
   actions: {
     search({commit, dispatch}, searchTerm) {
-      musicApi.get(searchTerm)
+      musicApi.get('' + searchTerm)
         .then(res => {
           commit('setSongs', res.data.results)
         })
     },
     //addToPlaylist
+    //removeFromPlaylist
   }
 })
