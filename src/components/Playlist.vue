@@ -1,11 +1,14 @@
 <template>
   <div class="hello">
-    <div v-for="playlist in playData" class="play-result" :key="song.trackId">
+    <div v-for="playlist in playData" class="play-result" :key="playlist.trackId">
       <img :src="song.artworkUrl100">
       <p>Song: {{song.trackName}}</p>
       <p>Artist: {{song.artistName}}</p>
       <p>Album: {{song.collectionName}}</p>
       <audio controls :src=song.previewUrl type="audio/mpeg" />
+      <div>
+        <!-- <button type="submit" @click="removeFromPlaylist">Remove</button> -->
+      </div>
     </div>
   </div>
 </template>

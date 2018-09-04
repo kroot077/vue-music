@@ -6,6 +6,9 @@
       <p>Artist: {{song.artistName}}</p>
       <p>Album: {{song.collectionName}}</p>
       <audio controls :src=song.previewUrl type="audio/mpeg" />
+      <div>
+        <button type="submit" @click="addToPlaylist">Add</button>
+      </div>
     </div>
   </div>
 </template>

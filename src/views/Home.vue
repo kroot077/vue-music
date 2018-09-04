@@ -7,7 +7,8 @@
     <h1>Search Results</h1>
     <div class="column">
       <div class="row">
-        <Song :songData="songs"></Song>
+        <Song :songData="songs">
+        </Song>
       </div>
     </div>
     <h1>My Playlist</h1>
@@ -45,9 +46,9 @@ export default {
       this.$store.dispatch("search", this.query)
       console.log(this.search)
     },
-    // addToPlaylist() {
-
-    // }
+    addToPlaylist() {
+      this.$store.dispatch()
+    }
     //removeFromPlaylist() {}
   },
   components: {
